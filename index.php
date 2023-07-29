@@ -36,3 +36,5 @@ switch ($action) {
         $emptySeats = $seats - $bookings;
         include_once "views/dashboard.php";
 }
+include_once "views/footer.php";
+
