@@ -21,7 +21,8 @@
     </div>
 
 
-    <form class="form">
+    <form class="form" method="post" action=".">
+        <input type="hidden" name="action" value="book_bus">
         <h4>Select Route</h4>
         <select name="route" id="route" class="form-input">
             <option value="">You have not selected</option>
