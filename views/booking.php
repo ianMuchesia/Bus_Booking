@@ -65,33 +65,31 @@
         <div class="input-container">
             <h2 style="text-align: center;">Select the Seat</h2>
             <table class="seatsDiagram">
-                <tr>
-                    <?php for($i=1;$i<=10;$i++){
-                        echo '<td value="'.$i. '">"'.$i.'"</td>';
-                    }
-                    ?>
-                    <td id="seat-1" data-name="1">1</td>
-                    <td id="seat-2" data-name="2">2</td>
-                    <td id="seat-3" data-name="3">3</td>
-                    <td id="seat-4" data-name="4">4</td>
-                    <td id="seat-5" data-name="5">5</td>
-                    <td id="seat-6" data-name="6">6</td>
-                    <td id="seat-7" data-name="7">7</td>
-                    <td id="seat-8" data-name="8">8</td>
-                    <td id="seat-9" data-name="9">9</td>
-                    <td id="seat-10" data-name="10">10</td>
+                <tr id="first-row">
+                    
+                    
+                    <td id="seat-1" data-name="1"  class="all-seats">1</td>
+                    <td id="seat-2" data-name="2" class="all-seats">2</td>
+                    <td id="seat-3" data-name="3" class="all-seats">3</td>
+                    <td id="seat-4" data-name="4" class="all-seats">4</td>
+                    <td id="seat-5" data-name="5" class="all-seats">5</td>
+                    <td id="seat-6" data-name="6" class="all-seats">6</td>
+                    <td id="seat-7" data-name="7" class="all-seats">7</td>
+                    <td id="seat-8" data-name="8" class="all-seats">8</td>
+                    <td id="seat-9" data-name="9" class="all-seats">9</td>
+                    <td id="seat-10" data-name="10" class="all-seats">10</td>
                 </tr>
-                <tr>
-                    <td id="seat-11" data-name="11">11</td>
-                    <td id="seat-12" data-name="12">12</td>
-                    <td id="seat-131" data-name="13">13</td>
-                    <td id="seat-14" data-name="14">14</td>
-                    <td id="seat-15" data-name="15">15</td>
-                    <td id="seat-16" data-name="16">16</td>
-                    <td id="seat-17" data-name="17">17</td>
-                    <td id="seat-18" data-name="18">18</td>
-                    <td id="seat-19" data-name="19">19</td>
-                    <td id="seat-20" data-name="20">20</td>
+                <tr id="second-row">
+                    <td id="seat-11" data-name="11" class="all-seats">11</td>
+                    <td id="seat-12" data-name="12" class="all-seats">12</td>
+                    <td id="seat-131" data-name="13" class="all-seats">13</td>
+                    <td id="seat-14" data-name="14" class="all-seats">14</td>
+                    <td id="seat-15" data-name="15" class="all-seats">15</td>
+                    <td id="seat-16" data-name="16" class="all-seats">16</td>
+                    <td id="seat-17" data-name="17" class="all-seats">17</td>
+                    <td id="seat-18" data-name="18" class="all-seats">18</td>
+                    <td id="seat-19" data-name="19" class="all-seats">19</td>
+                    <td id="seat-20" data-name="20" class="all-seats">20</td>
                 </tr>
                 <tr>
                     <td class="space">&nbsp;</td>
@@ -105,33 +103,42 @@
                     <td class="space">&nbsp;</td>
                     <td class="space">&nbsp;</td>
                 </tr>
-                <tr>
-                    <td id="seat-21" data-name="21">21</td>
+                <tr id="third-row">
+                   
                     <td class="space">&nbsp;</td>
-                    <td id="seat-22" data-name="22">22</td>
-                    <td id="seat-23" data-name="23">23</td>
-                    <td id="seat-24" data-name="24">24</td>
-                    <td id="seat-25" data-name="25">25</td>
-                    <td id="seat-26" data-name="26">26</td>
-                    <td id="seat-27" data-name="27">27</td>
+                    <td id="seat-21" data-name="21" class="all-seats">21</td>
+                    <td id="seat-22" data-name="22" class="all-seats">22</td>
+                    <td id="seat-23" data-name="23" class="all-seats">23</td>
+                    <td id="seat-24" data-name="24" class="all-seats">24</td>
+                    <td id="seat-25" data-name="25" class="all-seats">25</td>
+                    <td id="seat-26" data-name="26" class="all-seats">26</td>
+                    <td id="seat-27" data-name="27" class="all-seats">27</td>
 
-                    <td id="seat-28" data-name="28">28</td>
-                    <td id="seat-29" data-name="29">29</td>
+                    <td id="seat-28" data-name="28" class="all-seats">28</td>
+                    <td id="seat-29" data-name="29" class="all-seats">29</td>
                 </tr>
-                <tr>
-                    <td id="seat-30" data-name="30">30</td>
-                    <td class="space">&nbsp;</td>
-                    <td id="seat-31" data-name="31">31</td>
-                    <td id="seat-32" data-name="32">32</td>
-                    <td id="seat-33" data-name="33">33</td>
-                    <td id="seat-34" data-name="34">34</td>
-                    <td id="seat-35" data-name="35">35</td>
-                    <td id="seat-36" data-name="36">36</td>
+                <tr id="fourth-row">
+                <td class="space">&nbsp;</td>
+                    <td id="seat-30" data-name="30" class="all-seats">30</td>
+                   
+                    <td id="seat-31" data-name="31" class="all-seats">31</td>
+                    <td id="seat-32" data-name="32" class="all-seats">32</td>
+                    <td id="seat-33" data-name="33" class="all-seats">33</td>
+                    <td id="seat-34" data-name="34" class="all-seats">34</td>
+                    <td id="seat-35" data-name="35" class="all-seats">35</td>
+                    <td id="seat-36" data-name="36" class="all-seats">36</td>
 
-                    <td id="seat-37" data-name="37">37</td>
-                    <td id="seat-38" data-name="38">38</td>
+                    <td id="seat-37" data-name="37" class="all-seats">37</td>
+                    <td id="seat-38" data-name="38" class="all-seats">38</td>
                 </tr>
             </table>
+        </div>
+
+        <div class="input-container">
+            <label for="seat_no" class="form-label">
+                Seat No. Selected
+            </label>
+            <input type="text" placeholder="Seat Number" class="form-input" required name="seat_no" id="seat_no" />
         </div>
 <button class="btn"  type="submit">Book</button>
 

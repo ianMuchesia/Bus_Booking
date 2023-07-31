@@ -555,19 +555,18 @@ th, td{
         display: inline-block;
         background-color: #efefef;
         border-radius: 5px;
+		cursor: pointer;
     }
 
 
     .seatsDiagram  td.selected{
         background-color: greenyellow;
-        -webkit-animation-name: rubberBand;
-        animation-name: rubberBand;
-        animation-duration: 300ms;
-        animation-fill-mode: both;
+		
     }
 
     .seatsDiagram td.notAvailable
     {
         color: white;
         background-color: #db2619;
+
     }

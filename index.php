@@ -25,7 +25,7 @@ if (!$action) {
 switch ($action) {
     case "bookings":
         $routes=get_all_routes();
-        $bookedSeats= get_booked_seats($date);
+       
         include_once "views/booking.php";
         break;
 

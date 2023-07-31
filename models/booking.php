@@ -15,6 +15,19 @@ function get_all_routes()
 }
 
 
+function get_amount($route){
+    global $pdo;
+
+    $query = "SELECT amount FROM routes WHERE routes_id=:route";
+
+    $stmt = $pdo->prepare($query);
+    $stmt->bindValue(':route', $route);
+    $stmt->execute();
+    $amount = $stmt->fetch();
+    $stmt->closeCursor();
+    return $amount;
+}
+
 
 function get_booked_seats($date)
 {

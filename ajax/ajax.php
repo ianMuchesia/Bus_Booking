@@ -8,4 +8,9 @@ if(isset($_GET['date'])){
     echo json_encode($bookedSeats);
 }
 
+if(isset($_GET['route'])){
+    $route = $_GET["route"];
+    $amount = get_amount($route);
+    echo json_encode($amount);
+}
 ?>
