@@ -9,7 +9,6 @@ include_once "./views/sidebar.php";
 
 
 
-
 $action =  filter_input(INPUT_POST, 'action', FILTER_SANITIZE_SPECIAL_CHARS);
 
 if (!$action) {
@@ -26,6 +25,7 @@ if (!$action) {
 switch ($action) {
     case "bookings":
         $routes=get_all_routes();
+        $bookedSeats= get_booked_seats($date);
         include_once "views/booking.php";
         break;
 

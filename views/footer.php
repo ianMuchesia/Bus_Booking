@@ -1,5 +1,5 @@
 </main>
-<script>
+<script src="ajax/ajax.js">
 
 </script>
 </body>

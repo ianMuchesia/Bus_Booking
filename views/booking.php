@@ -1,3 +1,5 @@
+
+
 <section class="section-dashboard">
     <div class="head-title">
         <div class="left">
@@ -64,6 +66,10 @@
             <h2 style="text-align: center;">Select the Seat</h2>
             <table class="seatsDiagram">
                 <tr>
+                    <?php for($i=1;$i<=10;$i++){
+                        echo '<td value="'.$i. '">"'.$i.'"</td>';
+                    }
+                    ?>
                     <td id="seat-1" data-name="1">1</td>
                     <td id="seat-2" data-name="2">2</td>
                     <td id="seat-3" data-name="3">3</td>
