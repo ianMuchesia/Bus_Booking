@@ -17,9 +17,9 @@
                     Book Seat
                 </a>
 			</li>
-			<li  class="<? echo $action==='room'?'active':''?>">
-			<a href=".?action=room"><em class="fa fa-bed">&nbsp;</em>
-                    Manage Rooms
+			<li  class="<? echo $action==='route'?'active':''?>">
+			<a href=".?action=route"><em class="fa fa-bed">&nbsp;</em>
+                    Add Route/Bus
                 </a>
 			</li>
 			<li  class="<? echo $action==='staff'?'active':''?>">

@@ -56,6 +56,9 @@ switch ($action) {
         $routes=get_all_routes();
         include_once "views/booking.php";
         break;
+    case "route":
+        include_once "views/routes.php";
+        break;
     default:
         $buses = count_total_buses();
         $routes = count_total_routes();
