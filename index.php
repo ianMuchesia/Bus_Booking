@@ -1,6 +1,7 @@
 <?php
 require_once "models/database.php";
 require_once "models/dashboard.php";
+require_once "models/booking.php";
 
 
 include_once "./views/header.php";
@@ -24,6 +25,7 @@ if (!$action) {
 
 switch ($action) {
     case "bookings":
+        $routes=get_all_routes();
         include_once "views/booking.php";
         break;
 
