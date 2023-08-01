@@ -2,6 +2,8 @@
 require_once "models/database.php";
 require_once "models/dashboard.php";
 require_once "models/booking.php";
+require_once "models/routes.php";
+
 
 
 include_once "./views/header.php";
@@ -15,6 +17,15 @@ $amount = filter_input(INPUT_POST, 'amount', FILTER_SANITIZE_NUMBER_INT);
 $customer_name = filter_input(INPUT_POST, 'customer_name',FILTER_SANITIZE_SPECIAL_CHARS);
 $id_no = filter_input(INPUT_POST, 'id_no', FILTER_SANITIZE_NUMBER_INT);
 $seat_no = filter_input(INPUT_POST, 'seat_no', FILTER_SANITIZE_NUMBER_INT);
+
+
+$destination_1 = filter_input(INPUT_POST, 'destination_1',FILTER_SANITIZE_SPECIAL_CHARS);
+$destination_2 = filter_input(INPUT_POST, 'destination_2',FILTER_SANITIZE_SPECIAL_CHARS);
+if(isset($_POST['departure_time'])){
+    $departure_time = $_POST['departure_time'];
+}
+
+
 
 
 
@@ -57,6 +68,11 @@ switch ($action) {
         include_once "views/booking.php";
         break;
     case "route":
+        include_once "views/routes.php";
+        break;
+    case "add_route":
+   
+        add_route($destination_1, $destination_2, $amount,$departure_time);
         include_once "views/routes.php";
         break;
     default:

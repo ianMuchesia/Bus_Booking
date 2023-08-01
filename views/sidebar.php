@@ -22,14 +22,14 @@
                     Add Route/Bus
                 </a>
 			</li>
-			<li  class="<? echo $action==='staff'?'active':''?>">
-			<a href=".?action=staff"><em class="fa fa-users">&nbsp;</em>
-                    Staff Section
+			<li  class="<? echo $action==='booking_customer'?'active':''?>">
+			<a href=".?action=booking_customer"><em class="fa fa-users">&nbsp;</em>
+                Bookings
                 </a>
 			</li>
-			<li  class="<? echo $action==='complaints'?'active':''?>">
-			<a href=".?action=complaints"><em class="fa fa-comments">&nbsp;</em>
-                    Manage Complaints
+			<li  class="<? echo $action==='customers'?'active':''?>">
+			<a href=".?action=customers"><em class="fa fa-comments">&nbsp;</em>
+                    All Customer Records
                 </a>
 			</li>
 		</ul>
