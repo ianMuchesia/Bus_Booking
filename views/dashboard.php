@@ -13,7 +13,7 @@
             </ul>
         </div>
        
-        <a  href=".?action=add" class="btn-download">
+        <a  href=".?action=route" class="btn-download">
             <i class='bx bxs-cloud-upload'></i>
             <span class="text">ADD BUS</span>
         </a>

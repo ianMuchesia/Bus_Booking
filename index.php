@@ -85,10 +85,11 @@ switch ($action) {
         include_once "views/booking_customer.php";
         break;
     default:
-        $buses = count_total_buses();
+       
         $routes = count_total_routes();
         $bookings = count_total_bookings();
         $customers = count_total_customers();
+        $buses = $routes;
         $seats = $buses * 38;
         $emptySeats = $seats - $bookings;
         include_once "views/dashboard.php";

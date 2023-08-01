@@ -78,7 +78,7 @@ function booking_details($route, $date){
     global $pdo;
 
 
-    $query = "SELECT customers.customer_name,customers.id_no,bookings.seat_no,routes.destination_1, routes.destination_2,routes.amount, bookings.booking_date FROM customers LEFT JOIN bookings ON customers.customer_id = bookings.customer_id LEFT JOIN routes ON bookings.routes_id = routes.routes_id WHERE routes.routes_id = :route AND bookings.date = :date";
+    $query = "SELECT customers.customer_id, customers.customer_name,customers.id_no,bookings.seat_no,routes.destination_1, routes.destination_2,routes.amount, bookings.booking_date FROM customers LEFT JOIN bookings ON customers.customer_id = bookings.customer_id LEFT JOIN routes ON bookings.routes_id = routes.routes_id WHERE routes.routes_id = :route AND bookings.date = :date ORDER BY bookings.seat_no ASC";
 
 
     $statement = $pdo->prepare($query);
