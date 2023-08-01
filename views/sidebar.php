@@ -32,6 +32,11 @@
                     All Customer Records
                 </a>
 			</li>
+			<li  class="<? echo $action==='logout'?'active':''?>">
+			<a href=".?action=logout"><em class="fa fa-user">&nbsp;</em>
+                    Logout
+                </a>
+			</li>
 		</ul>
 		<ul class="side-menu">
 			<!-- <li>

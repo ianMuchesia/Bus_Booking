@@ -694,3 +694,10 @@ Receipt
 		display: none;
 	}
 }
+
+
+.login-section{
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 1em;
+}

@@ -10,6 +10,26 @@ require_once "models/customers.php";
 include_once "./views/header.php";
 include_once "./views/sidebar.php";
 
+session_start();
+if (isset($_SESSION['user_id'])) {
+    $user_id = $_SESSION['user_id'];
+
+    $userQuery = "SELECT * FROM users WHERE id = :id";
+    $stmt = $pdo->prepare($userQuery);
+    $stmt->bindValue('id', $user_id);
+    $stmt->execute();
+
+  
+    $user = $stmt->fetch();
+  $stmt->closeCursor();
+    if (!$user) {
+        header('Location: views/login.php');
+        exit;
+    }
+} else {
+    header('Location: views/login.php');
+    exit;
+}
 
 
 $date = filter_input(INPUT_POST, 'travel_date',FILTER_SANITIZE_SPECIAL_CHARS);
@@ -84,6 +104,9 @@ switch ($action) {
     case "booking_customer":
         $routes = get_all_routes();
         include_once "views/booking_customer.php";
+        break;
+    case "logout":
+        include_once "views/logout.php";
         break;
     default:
        
