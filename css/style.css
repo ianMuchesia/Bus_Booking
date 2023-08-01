@@ -540,9 +540,17 @@ table{
 	box-shadow: var(--shadow-2);
 	margin: 0 auto;
 }
-th, td{
+th{
 	padding: 1em;
 	border: 1px solid var(--dark-grey);
+}
+td{
+	padding: 1em;
+	border-bottom: 1px solid var(--dark-grey);;
+}
+.tr{
+	
+	border-bottom: 1px solid var(--dark-grey);;
 }
 
 .seatsDiagram td
@@ -570,3 +578,32 @@ th, td{
         background-color: #db2619;
 
     }
+	.options{
+		display: flex;
+		align-items: center;
+		justify-content: space-evenly;
+	}
+
+
+	.table-customers {
+		
+		border-collapse: collapse;
+		width: 100%;
+	  }
+	  
+	  .table-customers td, .table-customers th {
+		border: 1px solid #ddd;
+		padding: 8px;
+	  }
+	  
+	  .table-customers tr:nth-child(even){background-color: #f2f2f2;}
+	  
+	  .table-customers tr:hover {background-color: #ddd;}
+	  
+	  .table-customers th {
+		padding-top: 12px;
+		padding-bottom: 12px;
+		text-align: left;
+		background-color: var(--blue);
+		color: white;
+	  }

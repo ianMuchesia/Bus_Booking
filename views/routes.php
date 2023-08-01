@@ -44,7 +44,7 @@
                 <input type="time" id="departure_time" name="departure_time" class="form-input" required>
                 <div class="help-block with-errors"></div>
             </div>
-            <button class="btn btn-success" type="submit">Add Room</button>
+            <button class="btn btn-success" type="submit">Add Route</button>
         </form>
     </div>
 

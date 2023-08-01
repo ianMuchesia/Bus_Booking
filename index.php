@@ -80,6 +80,10 @@ switch ($action) {
         $customers = get_all_customers();
         include_once "views/customers.php";
         break;
+    case "booking_customer":
+        $routes = get_all_routes();
+        include_once "views/booking_customer.php";
+        break;
     default:
         $buses = count_total_buses();
         $routes = count_total_routes();

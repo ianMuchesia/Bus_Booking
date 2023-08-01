@@ -18,7 +18,7 @@
         </a>
     </div>
     <div class="table-container">
-        <table>
+        <table class="table-customers">
             <thead>
                 <tr>
                     <th>ID No</th>
@@ -32,7 +32,7 @@
             <tbody>
              
                     <?php foreach($customers as $customer): ?>
-                        <tr>
+                        <tr class="tr">
                     <td><?=$customer['id_no']?></td>
                     <td><?=$customer['customer_name']?></td>
                     <td><?=$customer['date']?></td>

@@ -1,5 +1,12 @@
+
+
+
 //route amount
+
+
+
 const amountInput = document.querySelector("#route");
+
 
 amountInput.addEventListener("change", () => {
   const xhr = new XMLHttpRequest();
@@ -19,20 +26,19 @@ const determineEmptySeats = (start, end, seatsArray) => {
   const seats = seatsArray;
   let output = "";
 
-  for (let counter = start;counter<=end;counter++){
+  for (let counter = start; counter <= end; counter++) {
     let matchFound = false;
-    for(let i = 0;i<seats.length; i++){
-      if(seats[i].seat_no === counter){
-        matchFound = true
+    for (let i = 0; i < seats.length; i++) {
+      if (seats[i].seat_no === counter) {
+        matchFound = true;
         output += `<td data-name="${counter}" class="selected all-seats">${counter}</td>`;
         break;
       }
     }
-    if(!matchFound){
+    if (!matchFound) {
       output += `<td class="seats all-seats" data-name="${counter}">${counter}</td>`;
     }
   }
-
 
   return output;
 };
@@ -78,3 +84,6 @@ document
       alert("Seat Already Booked");
     }
   });
+
+
+

@@ -146,6 +146,8 @@
     </form>
 
 
+    <script src="ajax/booking.js">
 
+</script>
 
 </section>
