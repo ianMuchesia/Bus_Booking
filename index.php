@@ -3,6 +3,7 @@ require_once "models/database.php";
 require_once "models/dashboard.php";
 require_once "models/booking.php";
 require_once "models/routes.php";
+require_once "models/customers.php";
 
 
 
@@ -74,6 +75,10 @@ switch ($action) {
    
         add_route($destination_1, $destination_2, $amount,$departure_time);
         include_once "views/routes.php";
+        break;
+    case "customers":
+        $customers = get_all_customers();
+        include_once "views/customers.php";
         break;
     default:
         $buses = count_total_buses();

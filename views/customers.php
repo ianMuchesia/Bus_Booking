@@ -21,14 +21,28 @@
         <table>
             <thead>
                 <tr>
-                    <th>Room No</th>
-                    <th>Booking Status</th>
-                    <th>Check in</th>
-                    <th>Checkout</th>
-                    <th>Action</th>
+                    <th>ID No</th>
+                    <th>Name</th>
+                    <th>Travel Date</th>
+                    <th>Seat No</th>
+                    <th>Route</th>
+                    <th>Fare Amount</th>
                 </tr>
             </thead>
             <tbody>
+             
+                    <?php foreach($customers as $customer): ?>
+                        <tr>
+                    <td><?=$customer['id_no']?></td>
+                    <td><?=$customer['customer_name']?></td>
+                    <td><?=$customer['date']?></td>
+                    <td><?=$customer['seat_no']?></td>
+                    <td><?=$customer['destination_1'] . ' to ' . $customer['destination_2'];?></td>
+                    <td><?='Ksh. ' . $customer['amount']?></td>
+                    </tr>
+                    <?php endforeach; ?>
+
+               
                 
             </tbody>
         </table>
