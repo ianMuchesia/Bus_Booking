@@ -49,9 +49,16 @@
 
         <div class="input-container">
             <label for="customer_name" class="form-label">
-                Customer Name
+                Passenger Name
             </label>
             <input type="text" placeholder="<NAME>" class="form-input" required name="customer_name" id="customer_name" />
+        </div>
+
+        <div class="input-container">
+            <label for="customer_name" class="form-label">
+                Passenger Contact
+            </label>
+            <input type="text" placeholder="<NAME>" class="form-input" required name="customer_contact" id="customer_contact" type="number" />
         </div>
 
         <div class="input-container">

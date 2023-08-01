@@ -16,6 +16,7 @@ $date = filter_input(INPUT_POST, 'travel_date',FILTER_SANITIZE_SPECIAL_CHARS);
 $route = filter_input(INPUT_POST, 'route', FILTER_SANITIZE_NUMBER_INT);
 $amount = filter_input(INPUT_POST, 'amount', FILTER_SANITIZE_NUMBER_INT);
 $customer_name = filter_input(INPUT_POST, 'customer_name',FILTER_SANITIZE_SPECIAL_CHARS);
+$customer_contact = filter_input(INPUT_POST, 'customer_contact',FILTER_SANITIZE_NUMBER_INT);
 $id_no = filter_input(INPUT_POST, 'id_no', FILTER_SANITIZE_NUMBER_INT);
 $seat_no = filter_input(INPUT_POST, 'seat_no', FILTER_SANITIZE_NUMBER_INT);
 
@@ -64,7 +65,7 @@ switch ($action) {
     case "book_bus":
 
         //print_r([$date, $route , $customer_name , $id_no, $seat_no]);
-        book_bus($date, $route, $customer_name , $id_no, $seat_no);
+        book_bus($date, $route, $customer_name , $id_no, $seat_no,$customer_contact);
         $routes=get_all_routes();
         include_once "views/booking.php";
         break;

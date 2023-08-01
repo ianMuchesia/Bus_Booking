@@ -1,3 +1,14 @@
+<?php 
+include_once "../models/booking.php";
+
+if(isset($_GET['id'])){
+	$pass_id = $_GET['id'];
+
+	$passenger = single_customer($pass_id);
+}
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -33,7 +44,7 @@
 	<center id="top">
 		<div class="logo"></div>
 		<div class="info">
-			<h2>SBISTechs Inc</h2>
+			<h2>Bus Services Inc</h2>
 		</div><!--End Info-->
 	</center><!--End InvoiceTop-->
 
@@ -41,9 +52,8 @@
 		<div class="info">
 			<h2>Contact Info</h2>
 			<p>
-				Address : street city, state 0000</br>
-				Email : JohnDoe@gmail.com</br>
-				Phone : 555-555-5555</br>
+				
+				Phone : 0<?=$passenger['contact']?></br>
 			</p>
 		</div>
 	</div><!--End Invoice Mid-->
@@ -54,94 +64,100 @@
 			<table>
 				<tr class="tabletitle">
 					<td class="item">
-						<h2>Item</h2>
+						<h2>Passenger Name</h2>
 					</td>
 					<td class="Hours">
-						<h2>Qty</h2>
+						<h2><?=$passenger['customer_name']?></h2>
 					</td>
-					<td class="Rate">
-						<h2>Sub Total</h2>
-					</td>
+					
 				</tr>
 
 				<tr class="service">
 					<td class="tableitem">
-						<p class="itemtext">Communication</p>
+						<p class="itemtext">Contact</p>
 					</td>
 					<td class="tableitem">
-						<p class="itemtext">5</p>
+						<p class="itemtext">05220500</p>
 					</td>
-					<td class="tableitem">
-						<p class="itemtext">$375.00</p>
-					</td>
-				</tr>
-
-				<tr class="service">
-					<td class="tableitem">
-						<p class="itemtext">Asset Gathering</p>
-					</td>
-					<td class="tableitem">
-						<p class="itemtext">3</p>
-					</td>
-					<td class="tableitem">
-						<p class="itemtext">$225.00</p>
-					</td>
-				</tr>
-
-				<tr class="service">
-					<td class="tableitem">
-						<p class="itemtext">Design Development</p>
-					</td>
-					<td class="tableitem">
-						<p class="itemtext">5</p>
-					</td>
-					<td class="tableitem">
-						<p class="itemtext">$375.00</p>
-					</td>
-				</tr>
-
-				<tr class="service">
-					<td class="tableitem">
-						<p class="itemtext">Animation</p>
-					</td>
-					<td class="tableitem">
-						<p class="itemtext">20</p>
-					</td>
-					<td class="tableitem">
-						<p class="itemtext">$1500.00</p>
-					</td>
-				</tr>
-
-				<tr class="service">
-					<td class="tableitem">
-						<p class="itemtext">Animation Revisions</p>
-					</td>
-					<td class="tableitem">
-						<p class="itemtext">10</p>
-					</td>
-					<td class="tableitem">
-						<p class="itemtext">$750.00</p>
-					</td>
+					
 				</tr>
 
 
 				<tr class="tabletitle">
-					<td></td>
+					<td class="item">
+						<h2>Route</h2>
+					</td>
+					<td class="Hours">
+						<h2><?=$passenger['destination_1']. ' to '.$passenger['destination_2'];?></h2>
+					</td>
+					
+				</tr>
+
+
+				<tr class="service">
+					<td class="tableitem">
+						<p class="itemtext">Seat No</p>
+					</td>
+					<td class="tableitem">
+						<p class="itemtext"><?=$passenger['seat_no']?></p>
+					</td>
+					
+				</tr>
+				<tr class="service">
+					<td class="tableitem">
+						<p class="itemtext">Booking Date</p>
+					</td>
+					<td class="tableitem">
+						<p class="itemtext"><?=$passenger['booking_date']?></p>
+					</td>
+					
+				</tr>
+
+				<tr class="tabletitle">
+					<td class="item">
+						<h2>Departure Date</h2>
+					</td>
+					<td class="Hours">
+						<h2><?=$passenger['date']?></h2>
+					</td>
+					
+				</tr>
+
+				<tr class="service">
+					<td class="tableitem">
+						<p class="itemtext">Departure Time</p>
+					</td>
+					<td class="tableitem">
+						<p class="itemtext"><?=$passenger['departure_time']?></p>
+					</td>
+					
+				</tr>
+
+
+
+				
+
+				
+
+
+
+				<tr class="tabletitle">
+					
 					<td class="Rate">
 						<h2>tax</h2>
 					</td>
 					<td class="payment">
-						<h2>$419.25</h2>
+						<h2>Ksh. 00.00</h2>
 					</td>
 				</tr>
 
 				<tr class="tabletitle">
-					<td></td>
+					
 					<td class="Rate">
 						<h2>Total</h2>
 					</td>
 					<td class="payment">
-						<h2>$3,644.25</h2>
+						<h2>Ksh. <?=$passenger['amount']?></h2>
 					</td>
 				</tr>
 
@@ -149,11 +165,20 @@
 		</div><!--End Table-->
 
 		<div id="legalcopy">
-			<p class="legal"><strong>Thank you for your business!</strong>  Payment is expected within 31 days; please process this invoice within that time. There will be a 5% interest charge per month on late invoices.
+			<p class="legal"><strong>Thank you for Travelling with us!</strong>  Arrive 30 minutes earlier before departure time
 			</p>
 		</div>
 
 	</div><!--End InvoiceBot-->
 </div><!--End Invoice-->
 
+
+
+<button class="btn no-print" style="margin-top:50px;margin-left:48%;">PRINT</button><br>
+<a href="../?action=booking_customer" style="margin-top:50px;margin-left:48%;" class="no-print btn btn-success">Back</a>
+<script>
+	const printBtn = document.querySelector("button");
+
+   printBtn.addEventListener("click", () => window.print());
+</script>
 <?php include "../views/footer.php"; ?>
